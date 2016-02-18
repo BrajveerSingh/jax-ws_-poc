@@ -1,0 +1,1 @@
+java -ms256m -mx4096m -XX:PermSize=128m -XX:MaxPermSize=128 -jar server.jar 5
