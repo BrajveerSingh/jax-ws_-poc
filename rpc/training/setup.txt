@@ -1,0 +1,35 @@
+Local machine setup:
+
+Copy and paste rcp directory to the local machine and run rpc server first. run rpc client.
+
+Running RPCServer:  java -jar rpcserver.jar 2
+                    
+					Here 2 is the idle interval in minutes. If the server does not recieve 
+					any request from rpc client then it will shutdown after this interval.
+					
+Running RPCClient: java -jar rpcclient.jar
+
+					Client will ask user to enter his/her choice. Following are valid choices
+					1. register
+					2. login
+					3. quit
+					User can enter quit to quit the client.
+					
+Database:  Database is maintained in a file users.txt under resources directory on server machine.
+
+Configuration: config.properties file is used for the configuration like server ip and server listening port.
+
+Distributed setup:
+
+copy client folder on client machine. 
+copy server folder on server machine.
+modify config.properties on both the machine to change the server ip and server port.
+start the server on server machine using above mentioned command.
+start client on the client machine using above mentioned command.
+
+
+
+Note: Your machine should have latest java installed. This code can run on any OS.
+      Java_Home environement variable must be set.
+	  If you get connect refuse execption on client that means there is some error on your server.
+	  If you get JVM bind exception while running server then try to change the port in config.properties and try again.
